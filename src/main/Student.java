@@ -1,9 +1,36 @@
 public class Student {
-    public static void main(String[] args) {
-        System.out.println("Running Student Application");
 
-        System.out.println("Hello, Jenkins!");
-        System.out.println("This is a simple Java application for Jenkins pipeline demonstration.");
-        System.out.println("Build-info: " + new java.util.Date());
+    private int id;
+    private String name;
+    private double marks;
+
+    public Student(int id, String name, double marks) {
+        this.id = id;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    public boolean isPassed() {
+        return marks >= 40;
+    }
+
+    public void display() {
+        System.out.println(
+            "ID: " + id +
+            ", Name: " + name +
+            ", Marks: " + marks
+        );
     }
 }
