@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Compiling Java Student Management Application...'
 
-                bat 'javac Student.java StudentManagement.java'
+                bat 'javac -d . src\\main\\Student.java src\\main\\StudentManagement.java'
             }
         }
 
